@@ -2,6 +2,15 @@
 <html>
 <head>
 <title>Authentication</title>
+<style>
+html { 
+  background: url('TTS.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
 <meta charset="UTF-8">
 </head>
 <body>
@@ -69,7 +78,6 @@
     });
   }
 </script>
-
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
@@ -78,7 +86,6 @@
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
-
 <div id="status">
 </div>
 
