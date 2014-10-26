@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Authentication</title>
+<title>Login</title>
 <style>
-html { 
+html,body { 
   background: url('TTS.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+  width:100%
+} 
+#progressBar {
+    width: 100%;
+	height: 50%;
+} 
+#loginButtons {
+	position: relative; /* or absolute */
+	text-align: center;
+	color: white;
+}
+#status {
+	position: relative;
+	text-align: center;
+	color: white;
 }
 </style>
 <meta charset="UTF-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
 </head>
 <body>
 <script>
@@ -78,16 +106,35 @@ html {
     });
   }
 </script>
+
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
+<div id="progressBar">
+    <div class="container">
 
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="email" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+</div>
+<div id="loginButtons">
+Or sign in using Facebook:
+</br>
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
+</div>
 <div id="status">
 </div>
-
+<NOSCRIPT>
 </body>
 </html>
